@@ -1,0 +1,47 @@
+
+
+//Browser History Simulation
+
+import java.util.Scanner;
+import java.util.Stack;
+
+
+public class Browser {
+
+    public static void main(String[] args){
+        String button;
+        Scanner in = new Scanner(System.in);
+        Scanner bt = new Scanner(System.in);
+
+        Stack<String> urlWeb = new Stack<>();
+
+        System.out.println("Enter the webpage url you want to visit : "+"\n");
+        urlWeb.push(in.nextLine());
+        urlWeb.push(in.nextLine());
+        urlWeb.push(in.nextLine());
+
+        System.out.println("\n");
+
+        System.out.println("Your browser history "+urlWeb.toString()+"\n");
+
+
+        System.out.println("Do you want to back to the previous page ? (yes/no) ");
+        button = bt.nextLine();
+
+
+        if(button.equals("yes")){
+
+            System.out.println("You are now in path or page : "+urlWeb.elementAt(2));
+        }
+
+        else if(button.equals("no")){
+
+            System.out.println("Current page : "+urlWeb.elementAt(0));
+        }
+
+
+
+
+
+    }
+}
